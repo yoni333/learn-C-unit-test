@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace nUnitCalculator
 {
     [TestFixture]
-    internal class CustomerTest
+    public class CustomerTest
     {
         [Test]
         public void FullName_InputStrings_resultConcat()

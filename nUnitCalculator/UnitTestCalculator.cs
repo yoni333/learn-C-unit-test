@@ -37,6 +37,12 @@ namespace nUnitCalculator
             var  res = c.GetOddNumbers(10, 20);
             //assert
             Assert.That(res,Is.EquivalentTo(numbersExpected));
+            Assert.That(res,Does.Contain(12));
+            Assert.That(res,Is.Not.Empty);
+            Assert.That(res.Count,Is.EqualTo(5));
+            Assert.That(res,Has.No.Member(6));
+            Assert.That(res, Is.Ordered);
+            Assert.That(res,Is.Unique);
         }
        
     }

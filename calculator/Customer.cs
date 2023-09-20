@@ -11,7 +11,21 @@ namespace calculator
         public string? greetMessage { get; set; }    
         public string fullName(string name , string lastName)
         {
+            string st = $"Hello ,{name} {lastName}";
+            greetMessage = st;
+            return st ;
+        }
+        public string fullNameRequired(string name, string lastName)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException("name is empty");
+            }
             return $"Hello ,{name} {lastName}";
+        }
+        public void FeelGreetMessage(string GreetMessage)
+        {
+            greetMessage = GreetMessage;
         }
     }
 }
