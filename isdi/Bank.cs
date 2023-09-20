@@ -10,7 +10,7 @@ namespace Bank
 
     {
         ILogger logger;
-        public int amount  = 0;
+        public int amount  = 100;
         public BankAccount(ILogger Logger) {
 
            

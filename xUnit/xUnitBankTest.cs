@@ -10,18 +10,21 @@ namespace xUnitCalculator
 {
     public class xUnitBankTest
     {
+
+        BankAccount b;
         public xUnitBankTest() {
 
 
-            Mock logMock = new Mock<ILogger>();
-            ILogger m = logMock.Object;
-            BankAccount b = new(m);
+            Mock<ILogger> logMock = new Mock<ILogger>();
+           
+             b = new(logMock.Object);
         }
         [Theory]
         [InlineData(20)]
+        [InlineData(90)]
         public void Despute_input_resultTrue(int a)
         {
-
+            Assert.True(b.Despute(a));
         }
 
     }
