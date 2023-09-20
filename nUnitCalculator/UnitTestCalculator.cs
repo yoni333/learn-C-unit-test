@@ -27,6 +27,17 @@ namespace nUnitCalculator
             double  res = c.AddNumbers(a, b);
              Assert.That(res, Is.EqualTo(6.8).Within(0.1));
         }
+        [Test]
+        public void OddnumbersRanger_InputMinAndMax_returnValidRange()
+        {
+            // arrenge
+            Calculator c = new();
+            List<int> numbersExpected = new List<int>() { 10, 12, 14, 16, 18 };
+            //acr
+            var  res = c.GetOddNumbers(10, 20);
+            //assert
+            Assert.That(res,Is.EquivalentTo(numbersExpected));
+        }
        
     }
 }

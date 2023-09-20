@@ -8,6 +8,7 @@ namespace calculator
 {
     public class Customer
     {
+        public string? greetMessage { get; set; }    
         public string fullName(string name , string lastName)
         {
             return $"Hello ,{name} {lastName}";
